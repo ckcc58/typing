@@ -29,7 +29,7 @@
                 if (e.key === "Enter") {
                     document.removeEventListener("keydown", start);
                     document.getElementById("start")?.remove();
-                    fetch("/firefly.json")
+                    fetch("./firefly.json")
                         .then(res => res.json())
                         .then(data => ChartGame.load(data));
                 }
